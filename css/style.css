@@ -1,0 +1,1003 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	background-color: #FAF4F2;
+}
+#bg-img{
+	background-image: url(../images/BG.jpg);	
+	width: 100%;
+	height: 1080px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10% 0% 26% 22% / 0% 10% 26% 22% ;
+	position: absolute;
+	top:-33px;
+	z-index: -1000;
+}
+.upArrow{
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	font-size: 50px;
+	color: #E76F51;
+	z-index: 100;
+}
+.animate__animated.animate__zoomIn{
+	--animate-duration: 2.2s;
+}
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 3s;
+}
+/* header */
+#header-container{
+	max-width: 1520px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding-top: 60px;
+	margin: 0 auto;
+}
+#header-left-block{
+	max-width: 600px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+#header-logo-wrapper{
+	background-color: #E76F51;
+	max-width: 50px;
+	width: 100%;
+	height: 50px;
+	border-radius: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-right: 50px;
+}
+#navigation{
+	max-width: 470px;
+	width: 100%;
+}
+#navigation ul{
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	font-size: 18px;
+	text-transform: capitalize;
+	font-family: 'Varela Round';
+	color: white;
+}
+#navigation ul li{
+	transition-property: all;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+	transition-delay: 0.25s;
+}
+#navigation ul li:hover{
+	font-size: 19px;
+	color: #E76F51;
+}
+#header-right-block{
+	max-width: 240px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+#header-right-block div a{
+	font-size: 18px;
+	font-family: 'Varela Round';
+	text-transform: capitalize;
+	color: white;
+}
+.header-sign{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	max-width: 100px;
+	width: 100%;
+	height: 40px;
+	border-radius: 25px;
+	border: 2px solid none;
+	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+	transition-delay: 0.25s; 
+}
+.header-sign:hover{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	max-width: 100px;
+	width: 100%;
+	height: 40px;
+	border-radius: 25px;
+	border: 2px solid #E76F51;
+	background-color: #E76F51;
+}
+.burger-wrapper{
+	width: 45px;
+	height: 45px;
+	border: 2px solid #E76F51;
+	border-radius: 16%;
+	position: fixed;
+	background: transparent;
+	cursor: pointer;
+	top: 63px;
+	right: 15px;
+	display: none;
+}
+.burger-line{
+	position: absolute;
+	height: 4px;
+	width: 30px;
+	background-color: #E76F51;
+	border-radius: 7px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .3s linear;
+}
+.L1{
+	top: 25%;
+}
+.L3{
+	top: 75%;
+}
+.burger-wrapper.active .L1{
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.burger-wrapper.active .L2{
+	opacity: 0;
+}
+.burger-wrapper.active .L3{
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+.signin-overlay,
+.signup-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #E76F51;
+	opacity: 99%;
+	z-index: 101;
+	display: none;
+}
+.signin-overlay.signin-show,
+.signup-overlay.signup-show{
+	display: flex;
+}
+
+/* signin/up popup */
+
+.signup-content,
+.signin-content{
+	margin: 0 auto;
+	padding-top: 100px;
+	max-width: 400px;
+	width: 90%;	
+}
+
+.form-container,
+.form-container-signin,
+.divEmailSignIN-container,
+.divPswrdSignIn-container,
+.divChekBoxSignIn-container,
+.divEmailSignUp-container,
+.divPswrdSignUP-container,
+.divRepeatPswrdSignUP-container,
+.divChekBoxSignUP-container{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+#signin-form,
+#signup_form{
+	color: #E76F51;
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding:30px;
+	box-shadow: 0 0 20px white;
+	border-radius: 10px;
+	background-color: white;
+}
+#signin-form label,
+#signup_form label,
+#signin-button,
+#signup-button{
+	margin: 20px 0 10px;
+}
+#signin-button,
+#signup-button{
+	position: absolute;
+	bottom: -40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	width: 100px;
+	border-radius: 10px;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 0 10px #fff;
+	color: #E76F51;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+#signin-button{
+	bottom: -120px;
+}
+#password-signin,
+#useremail-signin,
+#useremail,
+#password,
+#repeat_password{
+	outline: none;
+	border: none;
+	border-bottom: 2px solid white;
+	height: 30px;
+	color: gray;
+}
+#password-signin:focus,
+#useremail-signin:focus,
+#useremail:focus,
+#password:focus,
+#repeat_password:focus{
+	border-bottom: 2px solid #E76F51;
+	transition: all 0.5s linear;
+}
+.errDiv,
+.errorSignUpDiv{
+	font-size: 14px;
+	color: rgb(213, 236, 0);
+}
+.fa-eye,
+.fa-eye-slash{
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.fa-eye:hover,
+.fa-eye-slash:hover{
+    opacity: 1;
+}
+.fa-eye:active,
+.fa-eye-slash:active{
+    transform: scale(0.9);
+}
+
+/* section one */
+#section-one-wrapper{
+	max-width: 580px;
+	width: 100%;
+	height: 385px;
+	color: white;
+	margin: 0 auto;
+	margin-top: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+#section-one-wrapper h1{
+	max-width: 580px;
+	width: 100%;
+	font-size: 80px;
+	font-family: 'Luckiest Guy';;
+	text-align: center;
+	text-transform: capitalize;
+}
+#section-one-wrapper p{
+	max-width: 500px;
+	width: 100%;
+	font-size: 22px;
+	font-family: 'Caveat';
+	text-align: center;
+}
+.span-capitalaize{
+	text-transform: capitalize;
+}
+.span-uppercase{
+	text-transform: uppercase;
+}
+#section-one-discover{
+	max-width: 205px;
+	width: 100%;
+	height: 50px;
+	background-color: #E76F51;
+	border-radius: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-transform: capitalize;
+}
+#section-one-discover a:hover{
+	-webkit-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	        transform: scale(0.9);
+}
+/* section two */
+.section-two {
+	margin-top:290px;
+}
+.slider-wrapper{
+	display: block;
+	/* background-color: green; */
+	width: 100;
+	padding: 15px;
+	position: relative;
+}
+/* #service-wrapper{
+	max-width: 1518px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin: 0 auto;
+} */
+.arrow{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	font-size: 40px;
+	cursor: pointer;
+	color: #E76F51;
+}
+.arrow-left{
+	left: 10rem;
+}
+.arrow-right{
+	right: 10rem;
+}
+.slider-content{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.selectors{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.selector{
+	height: 7px;
+	width: 20px;
+	background-color: indianred;
+	margin: 10px;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+.selector:hover,
+.selector.active-selector{
+	background-color: gold;
+}
+.box-wrapper{
+	display: inline-block;
+	max-width: 357px;
+	width: 100%;
+	background-color: white;
+	border-radius: 20px;
+	padding: 60px 40px;
+	margin: 20px;
+	
+}
+.box{
+	max-width: 277px;
+	width: 100%;
+	height: 192px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	text-align: center;
+}
+.box img:hover{
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-box-shadow: 3px 3px 20px  #E76F51;
+	        box-shadow: 3px 3px 20px  #E76F51;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.box p{
+	font-family: 'Caveat';
+	font-size: 18px;
+}
+.box p:first-letter{
+	text-transform: capitalize;
+}
+.box h3{
+	font-family: 'Luckiest Guy';
+	font-size: 20px;
+	text-transform: capitalize;
+}
+/* section three */
+#bg-image2{
+	background-image: url(../images/shapes.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 1885px;
+	position: absolute;
+	top: -415px;
+	z-index: -400;
+}
+.section-three {
+	margin-top:150px;
+	position: relative;
+}
+#destination-container{
+	max-width: 1518px;
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.destination-container-header{
+	max-width: 450px;
+	width: 100%;
+	height: 240px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin: 0 auto;
+}
+.destination-container-header h2{
+	font-family: 'Luckiest Guy';
+	font-size: 40px;
+	text-transform: capitalize;
+	text-align: center;
+}
+#destination-img-wrapper{
+	position: relative;
+	max-width: 90px;
+	width: 100%;
+	height: 90px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+#destination-bg{
+	background-color: #E76F51;
+	max-width: 70px;
+	width: 100%;
+	height: 70px;
+	z-index: -1;
+	position: absolute;
+	border-radius: 50%;
+}
+#destination-box-container{
+	max-width: 1518px;
+	width: 100%;
+	height: 1455px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 55px;
+}
+.destination-box-wrapper:nth-child(n+5){
+	display: none;
+}
+.destination-box-wrapper{
+	max-width: 357px;
+	width: 100%;
+	height: 465px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: white;
+	border-radius: 20px;
+	position: relative;
+	padding: 40px;
+}
+div.destination-box-wrapper div:first-child{
+	background-color: white;
+	max-width: 40px;
+	width: 100%;
+	height: 40px;
+	border-radius: 14px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: absolute;
+	right: 60px;
+	top: 60px;
+}
+div.destination-box-wrapper div:first-child:hover,
+div.destination-box-wrapper div:first-child.heart{
+	background-image: url(../images/full-heart.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+div.destination-box-wrapper div:nth-child(3){
+	background-color: white;
+	color: #E76F51;
+    font-family: 'Varela Round';
+	font-size: 16px;
+	max-width: 145px;
+	width: 100%;
+	height: 50px;
+	border-radius: 14px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: absolute;
+	top: 193px;
+}
+div.destination-box-wrapper h4{
+	font-family: 'Luckiest Guy';
+	font-size: 18px;
+	letter-spacing: .5px;
+	margin-top: 20px;
+	text-transform: capitalize;
+	text-align: center;
+}
+div.destination-box-wrapper p{
+	font-family: 'Varela Round';
+	font-size: 15px;
+	text-align: center;
+	line-height: 25px;
+	max-width: 270px;
+	width: 100%;
+	letter-spacing: .5px;
+}
+div.destination-box-wrapper div:last-child{
+	background-color: #E76F51;
+	color: white;
+	border-radius: 25px;
+	max-width: 185px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Caveat';
+	font-size: 18px;
+	padding: 13px 0px;
+	text-transform: capitalize;
+	transition: 0.5s;
+	border: 2px solid #fff;
+}
+div.destination-box-wrapper div:last-child:hover{
+	cursor: pointer;
+	color: #E76F51;
+	background-color: white;
+	border: 2px solid #E76F51;
+}
+#view-all{
+	border: 2px solid #E76F51;
+	color: #E76F51;
+	border-radius: 25px;
+	max-width: 185px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Caveat';
+	font-size: 18px;
+	padding: 13px 0px;
+	text-transform: capitalize;
+	margin-top: -900px;
+	position: relative;
+}
+#view-all:hover{
+	cursor: pointer;
+	background-color: #E76F51;
+	color: white;
+}
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #E76F51;
+	opacity: 97%;
+	z-index: 101;
+	display: none;
+}
+.overlay.show{
+	display: block;
+}
+.close,
+.signin-close,
+.signup-close{
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%;
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	font-size: 25px;
+	color: #E76F51;
+	cursor: pointer;
+}
+.close:hover,
+.signin-close:hover,
+.signup-close:hover{
+	transform: scale(0.9);
+}
+.content{
+	display: flex;
+	max-width: 30%;
+	width: 90%;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 100px;
+}
+.content img{
+	max-width: 400px;
+	width: 300%;
+	margin-top: 30px;
+}
+.content h1,
+.error-span-style{
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: white;
+	font-size: 40px;
+	letter-spacing: 5px;
+}
+
+/* section four */
+.bg-img3{
+	background-image: url(../images/contact-us-bg.svg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	width: 100%;
+	z-index: -120;
+}
+.section-four{
+	padding-top: 50px;
+	width: 97%;
+	margin: 0 auto;
+}
+#contact-us-wrapper{
+	background-color: #F8E1DB;
+	max-width: 1518px;
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	border-radius: 20px;
+	padding: 15px;
+
+}
+#contact-us-left-block{
+	max-width: 616px;
+	width: 100%;
+}
+#contact-us-left-block h3{
+	font-family: 'Luckiest Guy';
+	font-size: 40px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+#contact-us-left-block p{
+	font-family: 'Caveat';
+	font-size: 18px;
+	max-width: 485px;
+	width: 100%;
+	margin: 10px 0px 30px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+#contact-us-left-block p:first-letter{
+	text-transform: capitalize;
+}
+#contact-us-right-block{
+	max-width: 465px;
+	width: 100%;
+} 
+#contact-us-right-block img{
+	width: 100%;
+}
+#send-email,
+#send-email form{
+	position: relative;
+}
+.form-properties{
+	background-image: url(../images/email.png);
+	background-position: 30px;
+	background-repeat: no-repeat;
+	background-size: 25px;
+	padding-left: 65px;
+	font-size: 14px;
+	font-family: 'Varela Round';
+	text-transform: capitalize;
+	max-width: 616px;
+	width: 100%;
+	height: 80px;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+}
+.send-Button{
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	background-color: #E76F51;
+	border-radius: 20px;
+	border: none;
+	max-width: 50px;
+	width: 100%;
+	height: 50px;
+	-webkit-animation: shadow 5s infinite ease-in-out;
+	        animation: shadow 5s infinite ease-in-out;
+}
+#send_email{
+	color: red;
+	margin: 15px 60px;
+	letter-spacing: 1px;
+	position: absolute;
+}
+@-webkit-keyframes shadow{
+	50% {-webkit-box-shadow: 3px 3px 15px  #E76F51;box-shadow: 3px 3px 15px  #E76F51;}
+}
+@keyframes shadow{
+	50% {-webkit-box-shadow: 3px 3px 15px  #E76F51;box-shadow: 3px 3px 15px  #E76F51;}
+}
+.plane{
+	position: absolute;
+	top: 50%;
+	right: 2px;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	color: white;
+	font-size: 20px;
+	z-index: 1;
+	cursor: pointer;
+	width: 100%;
+}
+.plane:hover{
+	font-size: 25px;
+}
+/* footer */
+footer{
+	margin-top: 150px;
+	background-color: #F8E1DB;
+	border-radius: 200px 200px 0px 0px;
+	padding: 50px;
+}
+footer h5{
+	font-family: 'Luckiest Guy';
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-transform: capitalize;
+	margin-bottom: 20px
+}
+footer p{
+	font-family: 'Varela Round';
+	font-size: 14px;
+	text-transform: capitalize;
+	letter-spacing: .5px;
+	line-height: 28px;
+	width: 100%;
+}
+#footer-container{
+	margin: 0 auto;
+	max-width: 1518px;
+	width: 100%;
+	/*height: 364px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 100px;
+}
+#footer-container-left-block{
+	max-width: 615px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+#footer-container-left-block p{
+	margin-bottom: 40px;
+}
+#footer-container-left-block p:first-letter{
+	text-transform: capitalize;
+}
+#footer-app-wrapper{
+	max-width: 305px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	/*align-items: center;*/
+}
+#footer-app-wrapper a img{
+	width: 100%;
+}
+#footer-container-right-block{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	max-width: 677px;
+	width: 100%;
+	height: 182px;
+}
+#footer-container-right-block p:hover{
+	color: #E76F51;
+}
+#copyRight{
+	margin-top: 50px;
+	font-family: 'Varela Round';
+	font-size: 14px;
+	text-transform: capitalize;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}

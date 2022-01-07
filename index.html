@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="MT.Georgian First Project">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Camping, travel, Camp,">
+    <meta name="author" content="Tornike Maghradze / MT.Georgian">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate" />
+    <meta property="og:url" content="https://mtgeorgian.github.io/TornikeMaghradze-Project-1/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tornike Maghradze - Project 1" />
+    <meta property="og:description" content="MT.Georgian First Project" />
+    <meta property="og:image" content="https://www.jollydays.at/modules/mrcommerce/upload/tmp/1000/mo/baum-uebernachtung-fuer-zwei-15643.jpg?v=1510573045" />
+    <title>JS Tornike Maghradze Project 2</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="https://kit.fontawesome.com/f05075e5db.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="images/tent-icon.svg" sizes="any">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+   <header id="backToHeader" class="animate__animated animate__fadeInDown">
+        <div id="header-container">
+           <div id="header-left-block">
+                <div id="header-logo-wrapper">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                </div>    
+               <nav class="navBarActive" id="navigation">
+                   <ul class="navBarActive" id="ul">
+                       <li>
+                           <a href="index.html">
+                               home
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#serviceS1">
+                               service
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#destinationS3">
+                               destination
+                           </a>
+                       </li>
+                       <li>
+                           <a href="#contactUsS4">
+                               contact us
+                           </a>
+                       </li>
+                   </ul>
+               </nav>
+           </div>
+           <div id="header-right-block">
+               <div class="header-sign navBarActive" id="sign-up">
+                    <a href="#">
+                        sign up
+                    </a>    
+               </div>
+               <div class="header-sign navBarActive" id="sign-in">
+                    <a href="#">
+                        sign in
+                    </a>    
+               </div>
+           </div>
+           <!-- <div id="burger">
+               <i class="fas fa-bars"></i>
+           </div> -->
+           <div class="burger-wrapper" id="burger-wrapper-toggle">
+               <div class="burger-line L1"></div>
+               <div class="burger-line L2"></div>
+               <div class="burger-line L3"></div>
+           </div>
+        </div>   
+    </header>
+    <div class="signin-overlay" id="signin-overlay">
+        <div class="signin-content" id="signin-content"></div>
+        <div class="signin-close" id="signin-close">X</div>
+    </div>
+    <div class="signup-overlay" id="signup-overlay">
+        <div class="signup-content" id="signup-content"></div>
+        <div class="signup-close" id="signup-close">X</div>
+    </div>
+    <div id="bg-img" class="animate__animated animate__zoomIn"></div>
+    <section class="section-one animate__animated animate__fadeInDown">
+       <div id="section-one-wrapper">
+           <h1>
+               Find Yourself Outside
+           </h1>
+           <p>
+               <span class="span-capitalaize">book</span> unique camping experiences on over 300,000 campsites, cabins, <span class="span-uppercase">rv</span> parks, public parks and more.
+           </p>
+           <div id="section-one-discover">
+                <a href="#">
+                    <p>
+                        discover
+                    </p>
+                </a>    
+           </div>
+       </div>
+   </section>
+    <a href="#backToHeader" id="serviceS1">
+       <i class="fas fa-arrow-alt-circle-up upArrow"></i>
+    </a>
+   <section class="section-two">
+        <div class="slider-wrapper" id="service-wrapper">
+            <i class="fas fa-chevron-circle-left arrow arrow-left" id="left-arrow"></i>
+            <div class="slider-content" id="slider_content">
+                <!-- <div class="box-wrapper">
+                    <div class="box">
+                        <img src="images/bonfire.svg" alt="image">
+                        <h3>
+                            camping & day Use
+                        </h3>
+                        <p>
+                            return to your favorite spot or discover a new one that's right for you.
+                        </p>
+                    </div>
+                </div>
+                <div class="box-wrapper">   
+                    <div class="box">
+                        <img src="images/ticket.svg" alt="image">
+                        <h3>
+                            tours & tickets
+                        </h3>
+                        <p>
+                            reserve tours and tickets to participate in events.
+                        </p>
+                    </div>
+                </div> -->
+                <!-- <div class="box-wrapper">   
+                    <div class="box">
+                        <img src="images/docs.svg" alt="image">
+                        <h3>
+                            permits
+                        </h3>
+                        <p>
+                            obtain permits for access to high-demand locations.
+                        </p>
+                    </div>
+                </div>
+                <div class="box-wrapper">   
+                    <div class="box">
+                        <img src="images/fishing.svg" alt="image">
+                        <h3>
+                            recreation activities
+                        </h3>
+                        <p>
+                            find the best spots for hunting, fishing & recreational shooting.
+                        </p>
+                    </div>
+                </div>  -->
+            </div> 
+            <i class="fas fa-chevron-circle-right arrow arrow-right" id="right-arrow"></i>
+        </div>
+   </section>
+   <section class="section-three" id="destinationS3">
+        <div id="bg-image2"></div>
+       <div id="destination-container">
+            <div class="destination-container-header">
+                <div id="destination-img-wrapper">
+                    <div id="destination-bg"></div>
+                    <img src="images/destination.svg" alt="image">
+                </div>    
+                <h2>
+                   explore destinations & activities
+                </h2>
+            </div> 
+            <div id="destination-box-container">    
+               <div class="destination-box-wrapper">
+                    <div>
+                       <img src="images/heart.svg" alt="image">
+                    </div> 
+                    <div>
+                        <img src="images/image1.png" alt="image">
+                    </div>    
+                    <div>
+                       36$/night
+                    </div>
+                    <h4>Trickle Creek Ranch</h4>
+                    <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                    </p>
+                    <div class="readMore">
+                       read more
+                    </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image2.png" alt="image">
+                    </div> 
+                   <div>
+                       35$/night
+                   </div>
+                   <h4>Dragonfly Tiny Cabin</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image3.png" alt="image">
+                    </div> 
+                   <div>
+                       38$/night
+                   </div>
+                   <h4>Tiny Cabin in the mountains</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image4.png" alt="image">
+                    </div> 
+                   <div>
+                       31$/night
+                   </div>
+                   <h4>The Stuga</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                   <div>
+                        <img src="images/image5.png" alt="image">
+                    </div> 
+                   <div>
+                       40$/night
+                   </div>
+                   <h4>Luxury Tiny Beach Cabin</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image6.png" alt="image">
+                    </div> 
+                   <div>
+                       45$/night
+                   </div>
+                   <h4>The Summit Cabin</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image7.png" alt="image">
+                    </div> 
+                   <div>
+                       36$/night
+                   </div>
+                   <h4>Kindred Spirits Cabin</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image8.png" alt="image">
+                    </div> 
+                   <div>
+                       50$/night
+                   </div>
+                   <h4>The Hermitage Cabin</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image9.png" alt="image">
+                    </div> 
+                   <div>
+                       30$/night
+                   </div>
+                   <h4>Red Lifeguard Stand</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image10.png" alt="image">
+                    </div> 
+                   <div>
+                       44$/night
+                   </div>
+                   <h4>The Tree House</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image11.png" alt="image">
+                    </div> 
+                   <div>
+                       33$/night
+                   </div>
+                   <h4>Barrier island elevated tent</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+               </div>
+               <div class="destination-box-wrapper">
+                   <div>
+                       <img src="images/heart.svg" alt="image">
+                   </div> 
+                    <div>
+                        <img src="images/image12.png" alt="image">
+                    </div> 
+                   <div>
+                       36$/night
+                   </div>
+                   <h4>Ninovan on the Shore</h4>
+                   <p>
+                       Book unique camping experiences on over 300,000 campsites.
+                   </p>
+                   <div class="readMore">
+                       read more
+                   </div>
+                </div>
+            </div>   
+            <div id="view-all">
+                view all
+            </div>
+            <div class="overlay" id="overlay">
+                <div class="content" id="content"></div>
+                <div class="close" id="close">X</div>
+            </div>
+       </div>
+   </section>
+   <section class="section-four" id="contactUsS4">
+       <div id="contact-us-wrapper" class="bg-img3">
+           <div id="contact-us-left-block">
+               <h3>
+                   Let's Stay in Touch
+               </h3>
+               <p>
+                   get travel planning ideas, helpful tips, and stories from our visitors delivered right to your inbox.
+               </p>
+                <div id="send-email">
+                    <form action="#" method="POST" id="send_email_form">
+                        <input class="form-properties" type="email" name="email" id="email" placeholder="email address" required>
+                        <button type="submit" class="send-Button">
+                            <i class="fas fa-paper-plane plane" id="sendButton"></i>
+                        </button>
+                    </form>
+                </div>
+           </div>
+           <div id="contact-us-right-block">
+               <img src="images/camp.svg" alt="image">
+           </div>
+       </div>
+   </section>
+   <footer>
+       <div id="footer-container">
+           <div id="footer-container-left-block">
+               <h5>
+                   Hipcamp is everywhere you want to camp.
+               </h5>
+               <p>
+                   discover unique experiences on ranches, nature preserves, farms, vineyards, and public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive backcountry sites, car camping, airstreams, tiny houses, RV camping, glamping tents and more.
+               </p>
+           </div>
+           <div id="footer-container-right-block">
+               <div>
+                    <h5>Get to Know Us</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>About Us</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Rules & Reservation Policies</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Accessibility</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Media Center</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Site Map</p>
+                            </a>
+                        </li>        
+                    </ul>    
+               </div>
+               <div>
+                    <h5>Plan with Us</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>Find Trip Inspiration</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Build a Trip</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Buy a Pass</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Enter a Lottery</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Let Us Help You</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>Your Account</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Your Reservations</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contactUsS4">
+                                <p>Contact Us</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Help Center</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Submit Feedback</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="appContainer">
+            <h5>
+                Download Our App
+            </h5>
+            <div id="footer-app-wrapper">
+                <a href="https://www.apple.com/app-store/" target="_blank">
+                     <img src="images/app-store.svg" alt="image">
+                </a>
+                <a href="https://play.google.com/store/apps" target="_blank">
+                     <img src="images/google-play-badge.svg" alt="image">
+                </a>           
+            </div>
+            <div id="copyRight">
+                © 2021. All rights reserved.
+            </div>
+        </div>        
+   </footer>
+   <script src="script/script.js"></script>
+</body>
+</html>
