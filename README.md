@@ -1,1 +1,1 @@
-# TornikeMaghradze-Project-1
+# TornikeMaghradze_JS_Project_2
