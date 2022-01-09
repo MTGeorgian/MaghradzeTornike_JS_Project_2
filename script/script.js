@@ -2,7 +2,7 @@
 
 document.getElementById('section-one-discover').addEventListener('click', function(){
 	alert('You Clicked Discover Button.');
-})
+});
 
 // burger bar
 
@@ -16,13 +16,13 @@ burgerBar.addEventListener('click', function(){
 	burgerBar.classList.toggle('active');
 	signIn.classList.toggle('burgerBar');
 	signUp.classList.toggle('burgerBar');
-})
+});
 
 // load more
 
 let loadmore = document.querySelector('#view-all');
     let currentItems = 1;
-    loadmore.addEventListener('click', (item) => {
+    loadmore.addEventListener('click', () => {
         let loadList = document.querySelectorAll('.destination-box-wrapper');
         for (let i = currentItems; i < currentItems + loadList.length; i++) {
             if (loadList[i]) {
@@ -36,37 +36,37 @@ let loadmore = document.querySelector('#view-all');
         if (currentItems >= loadList.length) {
             event.target.style.display = 'none';
         }
-    })
+    });
 
 // full heart
 
 let fullHeart = document.querySelectorAll(".destination-box-wrapper div:first-child");
 
 fullHeart.forEach( i => {
-	i.addEventListener('click', item => {
+	i.addEventListener('click', () => {
 		i.classList.toggle('heart');
-	})
-} )
+	});
+});
 
 // read more popup
 
 let readmore = document.querySelectorAll('.readMore');
 let overlay = document.getElementById('overlay');
-let close = document.getElementById('close');
+let closeSign = document.getElementById('close');
 
 readmore.forEach( item => {
-	item.addEventListener('click', i => {
+	item.addEventListener('click', () => {
 		overlay.classList.add('show');
-	})
+	});
 	
-	close.addEventListener('click', c => {
+	closeSign.addEventListener('click', () => {
 		overlay.classList.remove('show');
-	})
-})
+	});
+});
 
 // get info from server
 
-let content = document.getElementById('content')
+let content = document.getElementById('content');
 
 function getinfo() {
 
@@ -85,7 +85,7 @@ function getinfo() {
 
 			content.appendChild(hone);
 			content.appendChild(image);
-		})
+		});
 
 		console.log(convertdata);
 	}
@@ -93,11 +93,11 @@ function getinfo() {
 	function showerror(){
 		let span = document.createElement('span');
         span.setAttribute('class', 'error-span-style');
-        span.textContent = "Error"
+        span.textContent = "Error";
 
         let img2 = document.createElement('img');
         img2.setAttribute('src', 'https://www.freeiconspng.com/uploads/sign-red-error-icon-1.png');
-		img2.setAttribute('alt', 'image')
+		img2.setAttribute('alt', 'image');
 
 		content.appendChild(span);
 		content.appendChild(img2);
@@ -116,10 +116,10 @@ getinfo();
 // signin/signup popup & validation
 
 let signupoverlay = document.getElementById('signup-overlay');
-let signupcontent = document.getElementById('signup-content')
+let signupcontent = document.getElementById('signup-content');
 let signupclose = document.getElementById('signup-close');
 
-signUp.addEventListener('click', a => {
+signUp.addEventListener('click', () => {
 
 	signupoverlay.classList.add('signup-show');
 
@@ -142,7 +142,7 @@ signUp.addEventListener('click', a => {
 		emailInput.setAttribute('placeholder', 'Enter Email');
 	
 	let passwordLable = document.createElement('label');
-		passwordLable.setAttribute('for', 'password')
+		passwordLable.setAttribute('for', 'password');
 		passwordLable.textContent = "Password";
 	
 	let passwordInput = document.createElement('input');
@@ -161,7 +161,7 @@ signUp.addEventListener('click', a => {
 		eyeSlashSignUp.style.display = 'none';
 	
 	let repeatPasswordLable = document.createElement('label');
-		repeatPasswordLable.setAttribute('for', 'repeat-password')
+		repeatPasswordLable.setAttribute('for', 'repeat-password');
 		repeatPasswordLable.textContent = "Repeat Password";
 	
 	let repeatPasswordInput = document.createElement('input');
@@ -248,7 +248,7 @@ signUp.addEventListener('click', a => {
 		let pswrdShowSignUp = document.getElementById('password');
 		let repeatpswrdShowSignUp = document.getElementById('repeat_password');
 	
-		eyeshowSignUp.addEventListener('click', showpswrd => {
+		eyeshowSignUp.addEventListener('click', () => {
 					
 			if(pswrdShowSignUp.type === 'password'){
 				eyeshowSignUp.style.display = 'none';
@@ -256,7 +256,7 @@ signUp.addEventListener('click', a => {
 				pswrdShowSignUp.type = 'text';
 				repeatpswrdShowSignUp.type = 'text';
 			}
-			eyehideSignUp.addEventListener('click', hidepswrd =>{
+			eyehideSignUp.addEventListener('click', () =>{
 				
 				if(pswrdShowSignUp.type === 'text'){
 					eyeshowSignUp.style.display = 'inline-block';
@@ -264,8 +264,8 @@ signUp.addEventListener('click', a => {
 					pswrdShowSignUp.type = 'password';
 					repeatpswrdShowSignUp.type = 'password';
 				}
-			})        
-		})
+			});        
+		});
 
 
 
@@ -301,7 +301,7 @@ signUp.addEventListener('click', a => {
 
 		form_signUp.querySelectorAll('.errorSignUpDiv').forEach(item => {
 			item.textContent = '';
-		})	
+		});	
 
 		for (let element in error_signUp){
 			let signUpErrDiv = document.getElementById('err_signUpn_' + element);
@@ -313,19 +313,19 @@ signUp.addEventListener('click', a => {
 		if(Object.keys(error_signUp).length == 0){
 			form_signUp.submit();
 		}
-	})
+	});
 
-	signupclose.addEventListener('click', c => {
+	signupclose.addEventListener('click', () => {
 		signupcontent.innerHTML = '';
 		signupoverlay.classList.remove('signup-show');
-	})
-})
+	});
+});
 
 let signinoverlay = document.getElementById('signin-overlay');
-let signincontent = document.getElementById('signin-content')
+let signincontent = document.getElementById('signin-content');
 let signinclose = document.getElementById('signin-close');
 
-signIn.addEventListener('click', a => {
+signIn.addEventListener('click', () => {
 
 	signinoverlay.classList.add('signin-show');
 	
@@ -349,7 +349,7 @@ signIn.addEventListener('click', a => {
 		emailInputSignIn.setAttribute('placeholder', 'Enter Email'); 	
 	
 	let passwordLableSignIn = document.createElement('label');
-		passwordLableSignIn.setAttribute('for', 'password-signin')
+		passwordLableSignIn.setAttribute('for', 'password-signin');
 		passwordLableSignIn.textContent = "Password";
 		passwordLableSignIn.classList.add('pswrd-lbl-signIn');
 		
@@ -424,22 +424,22 @@ signIn.addEventListener('click', a => {
 	let eyehide = document.getElementById('eye-slash');
 	let pswrdShowSignIn = document.getElementById('password-signin');
 
-	eyeshow.addEventListener('click', showpswrd => {
+	eyeshow.addEventListener('click', () => {
 		        
         if(pswrdShowSignIn.type === 'password'){
 			eyeshow.style.display = 'none';
 			eyehide.style.display = 'inline-block';
 			pswrdShowSignIn.type = 'text';
         }
-		eyehide.addEventListener('click', hidepswrd =>{
+		eyehide.addEventListener('click', () =>{
 			
 			if(pswrdShowSignIn.type === 'text'){
 				eyeshow.style.display = 'inline-block';
 				eyehide.style.display = 'none';
 				pswrdShowSignIn.type = 'password';
 			}
-		})        
-	})
+		});        
+	});
 
 	formSignIn.addEventListener('submit', signIn_item => {
 		signIn_item.preventDefault();
@@ -465,7 +465,7 @@ signIn.addEventListener('click', a => {
 
 		form_SignIn.querySelectorAll('.errDiv').forEach(item => {
 			item.textContent = '';
-		})	 
+		});	 
 
 		for (let erritem in error_signInValidation){
 
@@ -503,13 +503,13 @@ signIn.addEventListener('click', a => {
 		if(Object.keys(error_signInValidation).length == 0){
 			form_SignIn.submit();
 		}
-	})
+	});
 
-	signinclose.addEventListener('click', c => {
+	signinclose.addEventListener('click', () => {
 		signincontent.innerHTML = '';
 		signinoverlay.classList.remove('signin-show');
-	})
-})
+	});
+});
 
 //  send email validation
 
@@ -542,7 +542,7 @@ send_email_form.addEventListener('submit', function(item){
 	if(Object.keys(error_sendEmail).length == 0){
 		sndemailtrgt.submit();
 	}	
-})
+});
 
 
 //Slider 
@@ -569,7 +569,7 @@ send_email_form.addEventListener('submit', function(item){
 			title: 'recreation activities',
 			paragraph:'find the best spots for hunting, fishing & recreational shooting.'
 		}
-	]
+	];
 
 	let sliderIndex = 0;
 	let arrowRight = document.getElementById('right-arrow');
@@ -578,14 +578,14 @@ send_email_form.addEventListener('submit', function(item){
 	let serviceWrapper = document.getElementById('service-wrapper');
 	let selectorList = document.getElementsByClassName('selector');
 
-	function createWrapperDiv(item){
+	function createWrapperDiv(){
 		let wrapperDiv = document.createElement('div');
 		wrapperDiv.setAttribute('class', 'box-wrapper');
 
 		return wrapperDiv;
 	}
 
-	function createBoxDiv(item){
+	function createBoxDiv(){
 		let boxDiv = document.createElement('div');
 		boxDiv.setAttribute('class', 'box');
 
@@ -614,7 +614,7 @@ send_email_form.addEventListener('submit', function(item){
 		return pTag;
 	}
 
-	function createSliderSelector(item){
+	function createSliderSelector(){
 		let selectors = document.createElement('div');
 		selectors.classList.add('selectors');
 
@@ -627,7 +627,7 @@ send_email_form.addEventListener('submit', function(item){
 				let id = event.target.getAttribute('data-id');
 				sliderIndex = id;
 				slider();
-			}
+			};
 
 			selectors.appendChild(selector);
 		});
@@ -674,7 +674,7 @@ send_email_form.addEventListener('submit', function(item){
 			slider();
 			return;
 		}
-		sliderIndex++
+		sliderIndex++;
 		slider();
 	}
 
@@ -683,6 +683,6 @@ send_email_form.addEventListener('submit', function(item){
 
 	setInterval( () => {
 		clickRight();
-	}, 4000)
+	}, 5000);
 
 	slider();

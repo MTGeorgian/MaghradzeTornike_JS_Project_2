@@ -95,10 +95,18 @@ body{
 	color: white;
 }
 #navigation ul li{
+	-webkit-transition-property: all;
+	-o-transition-property: all;
 	transition-property: all;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-out;
-	transition-delay: 0.25s;
+	-webkit-transition-duration: 0.2s;
+	     -o-transition-duration: 0.2s;
+	        transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-out;
+	     -o-transition-timing-function: ease-out;
+	        transition-timing-function: ease-out;
+	-webkit-transition-delay: 0.25s;
+	     -o-transition-delay: 0.25s;
+	        transition-delay: 0.25s;
 }
 #navigation ul li:hover{
 	font-size: 19px;
@@ -138,10 +146,18 @@ body{
 	height: 40px;
 	border-radius: 25px;
 	border: 2px solid none;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
 	transition-property: all;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-	transition-delay: 0.25s; 
+	-webkit-transition-duration: 0.3s;
+	     -o-transition-duration: 0.3s;
+	        transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	     -o-transition-timing-function: ease-out;
+	        transition-timing-function: ease-out;
+	-webkit-transition-delay: 0.25s;
+	     -o-transition-delay: 0.25s;
+	        transition-delay: 0.25s; 
 }
 .header-sign:hover{
 	display: -webkit-box;
@@ -180,7 +196,11 @@ body{
 	border-radius: 7px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	-webkit-transition: all .3s linear;
+	-o-transition: all .3s linear;
 	transition: all .3s linear;
 }
 .L1{
@@ -191,14 +211,18 @@ body{
 }
 .burger-wrapper.active .L1{
 	top: 50%;
-	transform: translate(-50%, -50%) rotate(45deg);
+	-webkit-transform: translate(-50%, -50%) rotate(45deg);
+	    -ms-transform: translate(-50%, -50%) rotate(45deg);
+	        transform: translate(-50%, -50%) rotate(45deg);
 }
 .burger-wrapper.active .L2{
 	opacity: 0;
 }
 .burger-wrapper.active .L3{
 	top: 50%;
-	transform: translate(-50%, -50%) rotate(-45deg);
+	-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+	    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+	        transform: translate(-50%, -50%) rotate(-45deg);
 }
 .signin-overlay,
 .signup-overlay{
@@ -214,6 +238,8 @@ body{
 }
 .signin-overlay.signin-show,
 .signup-overlay.signup-show{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -236,8 +262,13 @@ body{
 .divPswrdSignUP-container,
 .divRepeatPswrdSignUP-container,
 .divChekBoxSignUP-container{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	position: relative;
 }
 #signin-form,
@@ -246,7 +277,8 @@ body{
 	font-size: 20px;
 	letter-spacing: 1px;
 	padding:30px;
-	box-shadow: 0 0 20px white;
+	-webkit-box-shadow: 0 0 20px white;
+	        box-shadow: 0 0 20px white;
 	border-radius: 10px;
 	background-color: white;
 }
@@ -261,14 +293,17 @@ body{
 	position: absolute;
 	bottom: -40%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	background: white;
 	width: 100px;
 	border-radius: 10px;
 	padding: 10px;
 	border: none;
 	cursor: pointer;
-	box-shadow: 0 0 10px #fff;
+	-webkit-box-shadow: 0 0 10px #fff;
+	        box-shadow: 0 0 10px #fff;
 	color: #E76F51;
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -293,6 +328,8 @@ body{
 #password:focus,
 #repeat_password:focus{
 	border-bottom: 2px solid #E76F51;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
 	transition: all 0.5s linear;
 }
 .errDiv,
@@ -314,7 +351,9 @@ body{
 }
 .fa-eye:active,
 .fa-eye-slash:active{
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
 }
 
 /* section one */
@@ -389,7 +428,7 @@ body{
 .slider-wrapper{
 	display: block;
 	/* background-color: green; */
-	width: 100;
+	width: 100%;
 	padding: 15px;
 	position: relative;
 }
@@ -409,30 +448,43 @@ body{
 .arrow{
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	border-radius: 50%;
 	font-size: 40px;
 	cursor: pointer;
 	color: #E76F51;
 }
 .arrow-left{
-	left: 10rem;
+	left: 30%;
 }
 .arrow-right{
-	right: 10rem;
+	right: 30%;
 }
 .slider-content{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .selectors{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	position: absolute;
 	bottom: 0px;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 .selector{
 	height: 7px;
@@ -691,6 +743,8 @@ div.destination-box-wrapper div:last-child{
 	font-size: 18px;
 	padding: 13px 0px;
 	text-transform: capitalize;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 	border: 2px solid #fff;
 }
@@ -743,9 +797,15 @@ div.destination-box-wrapper div:last-child:hover{
 	position: fixed;
 	top: 15px;
 	right: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 10px;
 	font-size: 25px;
 	color: #E76F51;
@@ -754,15 +814,24 @@ div.destination-box-wrapper div:last-child:hover{
 .close:hover,
 .signin-close:hover,
 .signup-close:hover{
-	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	        transform: scale(0.9);
 }
 .content{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	max-width: 30%;
 	width: 90%;
 	margin: 0 auto;
-	flex-direction: column;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding-top: 100px;
 }
 .content img{
